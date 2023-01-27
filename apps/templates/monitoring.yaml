@@ -1,4 +1,3 @@
----
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -12,9 +11,9 @@ spec:
     repoURL: http://54.219.29.131:8084/gitlab-instance-34f73614/portfolio_gitops.git
     targetRevision: HEAD
     path: charts/kube-prometheus-stack
-    helm:
-      valueFiles:
-        - values.yaml
+    # helm:
+    #   valueFiles:
+    #     - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
