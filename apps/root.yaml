@@ -1,20 +1,23 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root
+  name: startup
   namespace: argocd
   finalizers:
-  - resources-finalizer.argocd.argoproj.io
+    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    server: https://kubernetes.default.svc
+    name: ''
     namespace: default
-  project: default
+    server: 'https://kubernetes.default.svc'
   source:
     path: apps/templates
-    repoURL:  http://54.219.29.131:8084/gitlab-instance-34f73614/portfolio_gitops.git
+    repoURL: http://54.219.29.131:8084/gitlab-instance-34f73614/portfolio_gitops.git
     targetRevision: HEAD
+  project: default
+  # Sync policy
   syncPolicy:
     automated:
-      prune: true
-      selfHeal: true
+      prune: true 
+      selfHeal: true 
+      allowEmpty: false
