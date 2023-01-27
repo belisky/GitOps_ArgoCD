@@ -6,7 +6,7 @@ argo-cd:
   configs:
     repositories:
       private-helm-repo:
-        url:  http://54.219.29.131:8084/gitlab-instance-34f73614/.git
+        url:  http://54.219.29.131:8084/gitlab-instance-34f73614/portfolio_gitops.git
         name: argo-cd
         username: root
         password: glpat-C38W9wgfenRxUa_iQBd7
