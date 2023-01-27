@@ -278,8 +278,8 @@ startupProbe:
 ## @param livenessProbe.successThreshold Minimum consecutive successes for the probe to be considered successful after having failed.
 ##
 livenessProbe:
-  enabled: true
-  initialDelaySeconds: 120
+  enabled: false
+  initialDelaySeconds: 600
   periodSeconds: 10
   timeoutSeconds: 5
   failureThreshold: 6
@@ -294,8 +294,8 @@ livenessProbe:
 ## @param readinessProbe.successThreshold Minimum consecutive successes for the probe to be considered successful after having failed.
 ##
 readinessProbe:
-  enabled: true
-  initialDelaySeconds: 30
+  enabled: false
+  initialDelaySeconds: 600
   periodSeconds: 10
   timeoutSeconds: 5
   failureThreshold: 6

@@ -393,7 +393,7 @@ forwarder:
   ## @param forwarder.livenessProbe.successThreshold Success threshold for livenessProbe
   ##
   livenessProbe:
-    enabled: true
+    enabled: false
     httpGet:
       path: /fluentd.healthcheck?json=%7B%22ping%22%3A+%22pong%22%7D
       port: http
@@ -414,7 +414,7 @@ forwarder:
   ## @param forwarder.readinessProbe.successThreshold Success threshold for readinessProbe
   ##
   readinessProbe:
-    enabled: true
+    enabled: false
     httpGet:
       path: /fluentd.healthcheck?json=%7B%22ping%22%3A+%22pong%22%7D
       port: http
@@ -967,7 +967,7 @@ aggregator:
   ## @param aggregator.startupProbe.successThreshold Success threshold for startupProbe
   ##
   startupProbe:
-    enabled: true
+    enabled: false
     httpGet:
       path: /fluentd.healthcheck?json=%7B%22ping%22%3A+%22pong%22%7D
       port: http
@@ -988,7 +988,7 @@ aggregator:
   ## @param aggregator.livenessProbe.successThreshold Success threshold for livenessProbe
   ##
   livenessProbe:
-    enabled: true
+    enabled: false
     httpGet:
       path: /fluentd.healthcheck?json=%7B%22ping%22%3A+%22pong%22%7D
       port: http
@@ -1009,7 +1009,7 @@ aggregator:
   ## @param aggregator.readinessProbe.successThreshold Success threshold for readinessProbe
   ##
   readinessProbe:
-    enabled: true
+    enabled: false
     httpGet:
       path: /fluentd.healthcheck?json=%7B%22ping%22%3A+%22pong%22%7D
       port: http
