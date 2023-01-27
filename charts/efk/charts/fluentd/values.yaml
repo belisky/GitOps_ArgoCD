@@ -14,7 +14,7 @@ global:
   ##   - myRegistryKeySecretName
   ##
   imagePullSecrets: []
-  storageClass: ""
+  storageClass: "local-path"
 
 ## @section Common parameters
 
@@ -1173,7 +1173,7 @@ aggregator:
     ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
     ##   GKE, AWS & OpenStack)
     ##
-    storageClass: ""
+    storageClass: "local-path"
     ## @param aggregator.persistence.accessModes Persistent Volume access modes
     ##
     accessModes:
