@@ -1,0 +1,36 @@
+argo-cd:
+  fullnameOveride: argocd
+  crds:
+    install: true
+    keep: true
+  configs:
+    repositories:
+      private-helm-repo:
+        url:  http://54.219.29.131:8084/gitlab-instance-34f73614/.git
+        name: argo-cd
+        username: root
+        password: glpat-C38W9wgfenRxUa_iQBd7
+    secret:
+      argoServerAdminPassword: "$2a$10$3HEvxXD8Gj8F787mlZB9SOOa0ytX/rPe3oHMZd7SwSJEo9CsBmATe"
+  server:
+    ingress:
+      enabled: true
+      annotations:
+        kubernetes.io/ingress.class: nginx
+        nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+        nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+      hosts:
+        - argo-cd.net
+      paths:
+        - /
+      pathType: Prefix
+    dex:
+      enabled: false
+    server:
+      extraArgs:
+        - --insecure
+      config:
+        repositories: |
+          - type: helm
+            name: argo-cd
+            url: https://argoproj.github.io/argo-helm
