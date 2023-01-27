@@ -7,13 +7,15 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: argocd
   project: default
   source:
     path: apps/
     repoURL: http://54.219.29.131:8084/gitlab-instance-34f73614/portfolio_gitops.git 
     targetRevision: HEAD
   syncPolicy:
+    syncOptions:
+      - CreateNamespace=true 
     automated:
       prune: true
       selfHeal: true
