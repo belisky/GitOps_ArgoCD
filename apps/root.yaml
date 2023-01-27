@@ -11,7 +11,7 @@ spec:
   project: default
   source:
     path: apps/templates
-    repoURL: https://github.com/arthurk/argocd-example-install.git
+    repoURL:  http://54.219.29.131:8084/gitlab-instance-34f73614/portfolio_gitops.git
     targetRevision: HEAD
   syncPolicy:
     automated:
