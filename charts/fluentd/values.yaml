@@ -779,7 +779,7 @@ aggregator:
   ##
   extraEnvVars: 
     - name: ELASTICSEARCH_HOST
-      value: "es-fluentd-kibana-elasticsearch.default.svc.cluster.local"
+      value: "es-elasticsearch.default.svc.cluster.local"
     - name: ELASTICSEARCH_PORT
       value: "9200"
 

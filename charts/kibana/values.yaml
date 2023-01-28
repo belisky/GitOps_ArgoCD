@@ -693,7 +693,7 @@ elasticsearch:
   ##   - elasticsearch-1
   ##   - elasticsearch-2
   ##
-  hosts: ["es-fluentd-kibana-elasticsearch.default.svc.cluster.local"]
+  hosts: ["es-elasticsearch.default.svc.cluster.local"]
   ## @param elasticsearch.port Elasticsearch port
   ##
   port: "9200"

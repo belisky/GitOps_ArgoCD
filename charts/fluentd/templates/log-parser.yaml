@@ -44,7 +44,7 @@ data:
     <match **>
       @type forward
       <server>
-        host es-fluentd-kibana-aggregator.default.svc.cluster.local
+        host fd-fluentd-aggregator.default.svc.cluster.local
         port 24224
       </server>
       <buffer>
