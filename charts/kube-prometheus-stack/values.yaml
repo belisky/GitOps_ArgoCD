@@ -794,7 +794,7 @@ grafana:
     # hosts:
     #   - grafana.domain.com
     hosts: 
-      - grafana.domain.com
+      - graf.crabdance.com
 
     ## Path for grafana ingress
     path: /
@@ -2484,7 +2484,7 @@ prometheus:
     # hosts:
     #   - prometheus.domain.com
     hosts: 
-      - prometheus.domain.com
+      - prom.crabdance.com
 
     ## Paths to use for ingress rules - one path should match the prometheusSpec.routePrefix
     ##
@@ -2996,7 +2996,7 @@ prometheus:
         scheme: http
         static_configs:
           - targets:
-              - n-ingress-nginx-ingress-controller-metrics.default.svc.cluster.local:9913
+              - nginx-ingress-ctrl-nginx-ingress-controller-metrics.default.svc.cluster.local:9913
     # - job_name: kube-etcd
     #   kubernetes_sd_configs:
     #     - role: node
