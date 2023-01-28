@@ -967,11 +967,11 @@ aggregator:
   ## @param aggregator.startupProbe.successThreshold Success threshold for startupProbe
   ##
   startupProbe:
-    enabled: false
+    enabled: true
     httpGet:
       path: /fluentd.healthcheck?json=%7B%22ping%22%3A+%22pong%22%7D
       port: http
-    initialDelaySeconds: 90
+    initialDelaySeconds: 600
     periodSeconds: 10
     timeoutSeconds: 60
     failureThreshold: 6
