@@ -10,7 +10,7 @@ metadata:
 spec:
   destination:
     name: in-cluster
-    namespace: ""
+    namespace: "default"
   project: default
   source:
     path: ./charts/efk
