@@ -17,7 +17,7 @@ global:
   ##   - myRegistryKeySecretName
   ##
   imagePullSecrets: []
-  storageClass: "local-path"
+  storageClass: ""
   elasticsearch:
     service:
       name: elasticsearch
@@ -699,7 +699,7 @@ master:
     ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
     ##   GKE, AWS & OpenStack)
     ##
-    storageClass: "local-path"
+    storageClass: ""
     ## @param master.persistence.existingClaim Existing Persistent Volume Claim
     ## then accept the value as an existing Persistent Volume Claim to which
     ## the container should be bound
@@ -994,7 +994,7 @@ data:
     ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
     ##   GKE, AWS & OpenStack)
     ##
-    storageClass: "local-path"
+    storageClass: ""
     ## @param data.persistence.existingClaim Existing Persistent Volume Claim
     ## then accept the value as an existing Persistent Volume Claim to which
     ## the container should be bound
