@@ -1871,10 +1871,10 @@ metrics:
     ##    memory: 128Mi
     limits: {}
     ## Examples:
-    ## requests:
-    ##    cpu: 100m
-    ##    memory: 128Mi
-    requests: {}
+    requests:
+       cpu: 100m
+       memory: 128Mi
+    # requests: {}
   ## Elasticsearch metrics container's liveness probe
   ## ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#container-probes
   ## @param metrics.livenessProbe.enabled Enable/disable the liveness probe (metrics pod)
@@ -2115,15 +2115,15 @@ volumePermissions:
   ##
   resources:
     ## Example:
-    ## limits:
-    ##    cpu: 100m
-    ##    memory: 128Mi
-    limits: {}
+    limits:
+       cpu: 100m
+       memory: 128Mi
+    # limits: {}
     ## Examples:
-    ## requests:
-    ##    cpu: 100m
-    ##    memory: 128Mi
-    requests: {}
+    requests:
+       cpu: 100m
+       memory: 128Mi
+    # requests: {}
 
 ## Kernel settings modifier image
 ##
@@ -2166,15 +2166,15 @@ sysctlImage:
   ##
   resources:
     ## Example:
-    ## limits:
-    ##    cpu: 100m
-    ##    memory: 128Mi
-    limits: {}
+    limits:
+       cpu: 100m
+       memory: 128Mi
+    # limits: {}
     ## Examples:
-    ## requests:
-    ##    cpu: 100m
-    ##    memory: 128Mi
-    requests: {}
+    requests:
+       cpu: 100m
+       memory: 128Mi
+    # requests: {}
 
 ## @section Kibana Parameters
 

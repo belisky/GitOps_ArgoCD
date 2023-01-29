@@ -2074,12 +2074,12 @@ prometheusOperator:
   ## Resource limits & requests
   ##
   resources: {}
-  # limits:
-  #   cpu: 200m
-  #   memory: 200Mi
-  # requests:
-  #   cpu: 100m
-  #   memory: 100Mi
+  limits:
+    cpu: 200m
+    memory: 200Mi
+  requests:
+    cpu: 100m
+    memory: 100Mi
 
   # Required for use in managed kubernetes clusters (such as AWS EKS) with custom CNI (such as calico),
   # because control-plane managed by AWS cannot communicate with pods' IP CIDR and admission webhooks are not working
@@ -2946,8 +2946,8 @@ prometheus:
     ## Resource limits & requests
     ##
     resources: {}
-    # requests:
-    #   memory: 400Mi
+    requests:
+      memory: 400Mi
 
     ## Prometheus StorageSpec for persistent data
     ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/user-guides/storage.md
@@ -3675,8 +3675,8 @@ thanosRuler:
     ## ref: https://kubernetes.io/docs/user-guide/compute-resources/
     ##
     resources: {}
-    # requests:
-    #   memory: 400Mi
+    requests:
+      memory: 400Mi
 
     ## Pod anti-affinity can prevent the scheduler from placing Prometheus replicas on the same node.
     ## The default value "soft" means that the scheduler should *prefer* to not schedule two replica pods onto the same node but no guarantee is provided.
