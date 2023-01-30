@@ -14,7 +14,7 @@ spec:
   project: default
   source:
     path: ./portfolio_helm_flask_app
-    repoURL: http://54.219.29.131:8084/gitlab-instance-34f73614/portfolio_flask_app.git
+    repoURL: http://54.219.29.131:8084/gitlab-instance-34f73614/portfolio_flask_app_helm_chart.git
     targetRevision: HEAD
   syncPolicy:
     automated:
